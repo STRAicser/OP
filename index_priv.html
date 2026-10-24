@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.w3.org/1999/html">
+<head>
+  	<title><?php echo($dest); ?></title>
+  <base href="https://www.osteriapandemonio.it/tmp/">
+  	<meta name="description" content="Osteria Pandemonio, nel cuore di Genova un locale insolitamente o tipicamente genovese." />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="no-cache, no-store, must-revalidate" />
+	<meta name="keywords" content="Osteria, Pandemonio, Genova, Italia, ristorante, trattoria, winebar, wine-bar,  moda, fashion, glamour, stile, eleganza, buongusto, classe,  donna, vino, vini, enoteca, metodo classico, prosecco, Valdobbiadene, rossese,genovese, farinata, Dolceacqua, carne, pesce, vermentino, pigato, riviera, spritz, aperitivi, compleanni,pranzo, cena, menu, menù">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+	<script src="js/qrcc.js"> </script>
+	<!--<meta http-equiv="Cache-Control" content="no-cache">-->
+	<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">-->
+	<!--<link rel="stylesheet" href="res/css/ms.css">-->
+	<!--<link rel="stylesheet" href="./tmp/res/css/ico.css">-->
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<!-- Start cookieyes banner  <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/178c750484cded55269f27e3/script.js"> </script>-->
+	<!-- End cookieyes banner -->
+	<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">-->
+<style>
+:root{
+--tc:#ffffff;
+--bgc:#e6e600;
+--wp100:100%;
+--wp1:8.33333%;--wp2:16.66666%;--wp3:24.99999%;--wp4:33.33333%;
+--wp5:41.66666%;--wp6:49.99999%;--wp7:58.33333%;--wp8:66.66666%;
+--wp9:74.99999%;--wp10:83.33333%;--wp11:91.66666%;--wp12:99.99999%;
+--w1:10dvw;;
+--w2:20dvw;
+--w3:30dvw;
+--w4:40dvw;
+--w5:50dvw;
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+margin: 0;
+}
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+html {
+interpolate-size: allow-keywords;
+}
+}
+body {
+/* 4. Add accessible line-height */
+line-height: 1.5;
+/* 5. Improve text rendering */
+-webkit-font-smoothing: antialiased;
+}
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p {
+text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+text-wrap: balance;
+}
+/*
+10. Create a root stacking context
+*/
+#root, #__next {
+isolation: isolate;
+}
+}
+</style>
+<style id="root">
+:root {
+--x:0;
+--w:100dvw;
+--h:100dvh;
+}
+</style>
+<style id="css_text">
+@font-face {
+font-family: 'Amatic SC';
+src: url('fonts/Amatic SC.woff2');
+}
+*{
+font-family:'Amatic SC';
+text-align:center;
+}
+label,input,select,option,p,b,strong,textarea,.btn{
+font-size:3dvh;
+}
+h1{
+margin-block-start:0;
+margin-block-end:0;
+background-color:#000000;
+color:white;
+font-size:3dvh;
+height:4dvh;
+width:100%;
+}
+</style>
+<style id="css_main">
+html,body,header,section{
+width:100dvw;
+overflow:hidden;
+background-color:var(--bgc);
+}
+html,body{
+/*height: var(--h);*/
+min-height:100dvh;
+margin:0;
+padding:0;
+}
+.dn{
+display:none;
+}
+main{
+min-height:88dvh;
+width:100dvw;
+}
+</style>
+<style id="css_dropdown">
+  </style>
+<style id="css_width">
+.wp100{width:100%}
+.wp1{width:8.33333%}.wp2{width:16.66666%}.wp3{width:24.99999%}.wp4{width:33.33333%}
+.wp5{width:41.66666%}.wp6{width:49.99999%}.wp7{width:58.33333%}.wp8{width:66.66666%}
+.wp9{width:74.99999%}.wp10{width:83.33333%}.wp11{width:91.66666%}.wp12{width:99.99999%}
+.w1{ width:10dvw;}.w2{width:20dvw}.w3{width:30dvw}.w4{width:40dvw}.w5{min-width:50dvw}
+ </style>
+<style id="css_btn">
+.btn{
+width:25dvw;
+}
+.Y{
+background-color:#00aa00;
+}
+.N{
+background-color:#ff0000;
+}
+.B{
+background-color:#000000;
+color:#ffffff
+}
+</style>
+<style id="css_modal">
+.modal{
+display:none;
+position:absolute;
+margin-top:8dvh;
+width:100dvw;
+height:92dvh;
+color:#000000;
+background-color:#ffffff;
+}
+.modal-content{
+width:80dvw;
+height:80dvh;
+}
+</style>
+<style id="css_iframe">
+.iframec{
+margin-left: 25dvw;
+position: relative;
+overflow: hidden;
+width: 50%;
+padding-top: 30%;
+/* padding-top: 56.25%; 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+/* Then style the iframe to fit in the container div with full height and width */
+.iframe {
+position: absolute;
+top:0;
+left:0;
+bottom:0;
+right:0;
+width:100%;
+height:100%;
+}
+#map{
+width:90dvw;
+height:70dvh;
+margin-left:5dvw;
+}
+</style>
+<style id="tooltip">
+.tooltip{
+position: relative;
+display: inline-block;
+border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 120px;
+background-color: black;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+position: absolute;
+z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
+</style>
+<style id="css_menu">
+menu{
+list-style-type: none;
+background-color: #000000;
+color: #ffffff;
+overflow: hidden;
+padding: 0;
+}
+menu li{
+float-left;
+height: 8dvh;
+}
+menu a{
+color:#ffffff;
+text-decoration:none;
+display:block;
+}
+.m-t{
+width:100dvw;
+}
+.m-t li{
+border:1px solid var(--bgc);
+float:left;
+}
+m-t-m{
+position: absolute;
+}
+.m-t-m li{
+width:var(--wp2);
+}
+.m-t-d{
+position:absolute;
+display: none;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.m-t-d li, .m-t-s li{
+ width:var(--wp4);
+}
+li a, .dropbtn {
+float:left;
+padding-top:2dvh;
+}
+
+menu.m-t li a:hover b{opacity:0;}
+menu.m-t li a.active b{opacity:0;}
+menu.m-t-s-sub li a:hover b{color:var(--bgc)}
+menu.m-t-s-sub li a.active b{color:var(--bgc)}
+#Logo_a{height:6dvh !important; margin-top:1dvh;}
+#dropown_a {float: right}
+  </style>
+<style id="css_m-t-s-sub">
+.m-t-s-sub, .m-t-s-sub-s{
+float:left;
+margin-left:0;
+width:100%;
+height:12dvh;
+border:1px solid var(--bgc);
+display:flex;
+/*justify-content: space-between;*/
+flex-wrap:wrap;
+}
+menu.m-t-s-sub li{
+border:1px solid var(--bgc);
+min-width:fit-content;
+width:16%;
+max-width:var(--wp100);
+float:left;
+height:8dvh;
+flex-grow: 1;
+}
+.m-t-s-sub:last-child{
+width:fill-parent;
+}
+menu.m-t-s-sub span{
+border-bottom:1px solid var(--bgc);
+background-color:var(--bgc);
+color:black;
+width:var(--wp100);
+float:left;
+height:4dvh;
+}
+/*	.m-t-s-sub-1{
+	margin-left:0;
+	}
+	.m-t-s-sub-2{
+		margin-left:33.33333%;
+	}
+	.m-t-s-sub-3{
+		margin-left:66.66666%;
+	}*/
+</style>
+<style id="css_slide">
+.slide {
+display:inherit;
+width:100%;
+height:61dvh;
+float:left;
+background-color:black;
+color:white;
+padding:0;
+overflow: hidden;
+border:1px solid var(--bgc);
+}
+.slide img{
+margin-left:calc((100% - 32dvw)/2);
+/*calc((66.66666% - (47wvh / 3 * 4)));*/
+width:32dvw;
+/*calc((47wvh/3)*4);*/
+}
+/*.slide h2{
+background-color:black;
+color:white;
+}*/
+.slide-nav{
+display:inherit;
+float:right;
+width:100%;
+height:3dvh;
+}
+.sbtn{
+border:1px solid var(--bgc);
+font-size:2dvh;
+background-color:#000000;
+color:#ffffff;
+width:50%;
+padding:0;
+height:3dvh;
+}
+.L{
+float:left
+}
+.R{
+float:right;
+}
+</style>
+<style id="css_form">
+.formin{
+width:100%;
+font-size:100%;
+}
+#f_contact > input{
+width:80dvw;
+font-size:x-large;
+}
+</style>
+<style id="css_ico">
+  .i,.ir,#Logo_a{
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  background-size: contain;
+	  height: 6dvh;
+	  width: 100%;
+  }
+  #Logo_a{background-image: url(/tmp/img/op_logo_yb.png);}
+  #dropown_a{background-image: url(/tmp/img/ico/ico_menu.svg);}
+  #Logo_a:hover, #Logo_a.active{background-image: url(/tmp/img/ico/ico_home.svg");}
+  #Info_a:hover, #Info_a.active{background-image: url(/tmp/img/ico/ico_info.svg);}
+  #Foods_a:hover, #Foods_a.active{background-image: url(/tmp/img/ico/ico_food.svg);}
+  #Drinks_a:hover, #Drinks_a.active{ background-image: url(/tmp/img/ico/ico_cocktail.svg);}
+  #Gallery_a:hover, #Gallery_a.active{background-image: url(/tmp/img/ico/ico_images.svg);}
+  #Where_a:hover, #Where_a.active{background-image: url(/tmp/img/ico/ico_where.svg);}
+  #Contacts_a:hover, #Contacts_a.active{background-image: url(/tmp/img/ico/ico_phone.svg);}
+  #Location_a:hover, #Location_a.active{background-image: url(/tmp/img/ico/ico_location.svg);}
+  #News_a:hover, #News_a.active{background-image: url(/tmp/img/ico/ico_news.svg);float: left;}
+  #Promo_a:hover, #Promo_a.active{background-image: url(/tmp/img/ico/ico_percent.svg);float: left;}
+  #Events_a:hover, #Events_a.active{background-image: url(/tmp/img/ico/ico_cake.svg);float: left;}
+  #Tools_a:hover, #Tools_a.active{background-image: url(/tmp/img/ico/ico_toolbox.svg);}
+  #Messengers_a:hover, #Messengers_a.active{background-image: url(/tmp/img/ico/ico_whatsapp-solid.svg);}
+  #Qrc_a:hover, #Qrc_a.active{background-image: url(/tmp/img/ico/ico_qrc.svg);}
+  #Madonnina:hover, #Madonnina.active{background-image: url(/tmp/img/ico/ico_madonna.svg);}
+  #Bar:hover, #ibar.active{background-image: url(/tmp/img/ico/ico_bar.svg);}
+  #Colonna:hover, #Colonna.active{background-image: url(/tmp/img/ico/ico_column.svg);}
+  #Mattoni_a:hover, #Mattoni_a.active{color: #e6e600;}
+  #Madonnina_a:hover, #Madonnina_a.active{color: #e6e600;}
+  #Bar_a:hover, #Bar_a.active{color: #e6e600;}
+  #Colonna_a:hover, #Colonna_a.active{color: #e6e600;}
+  #Dettagli_a:hover, #Dettagli_a.active{color: #e6e600;}
+</style>
+<style id="css_home">
+#Home{
+background-position:center;
+background-size:cover;
+background-image:url("/tmp/img/c2c4.jpeg");
+padding-top:0;
+}
+	#Home h1{
+	height:0;
+	}
+</style>
+<style id="css_footer">
+footer{
+position:fixed;
+width:100dvw;
+height:3dvh;
+border-top:1px solid black;
+}
+footer details div {position: absolute;width:100%;bottom:3dvh;background-color:white;}
+footer details[open] ::-webkit-details-marker
+{transform: rotate(180deg);}
+</style>
+<style id="mediaXS">
+@media only screen and (max-width: 600px) {
+#map{
+width:100dvw;
+height:75dvw;
+margin-top:10px;
+margin-left:0;
+}
+#qrcode{
+width:80vw;
+margin-left:10vw;
+margin-top:10px;
+}
+#qrc-in{
+margin-bottom:10px;}
+.slide img{
+margin-left:0;
+width:100%;
+}
+
+}
+</style>
+</head>
+<body onload="init()">
+<header>
+	<menu class="m-t m-t-m">
+		<li><a id="Logo_a" class="i" rel="follow" href="https://www.osteriapandemonio.it/Home.php?c=GINTONIC" onclick="act('ico','ilogo')"></a></li>
+		<li><a id="Info_a" class="i" rel="follow" href="https://www.osteriapandemonio.it/Info.php?c=GINTONIC" onclick="act('ico','iinfo')"><b>INFO</b></a></li>
+		<li><a id="Gallery_a" class="i" rel="follow" href="https://www.osteriapandemonio.it/Gallery.php?c=GINTONIC" onclick="act('ico','igallery')"><b>FOTO</b></a></li>
+		<li><a id="Where_a" class="i" rel="follow" href="https://www.osteriapandemonio.it/Where.php?c=GINTONIC" onclick="act('ico','iwhere')"><b>DOVE</b></a></li>
+		<li><a id="Tools_a" class="i" rel="follow" href="https://www.osteriapandemonio.it/Tools.php?c=GINTONIC" onclick="act('ico','itools')"><b>TOOLS</b></a></li>
+		<li class="dropdown"><a href="javascript:void(0)" id="dropown_a" class="i wp2"></a></li>
+	</menu>
+	<menu id="dropdown_c" class="m-t m-t-d">
+		<li><a id="Contacts_a" class="i" rel="follow" href="https://www.osteriapandemonio.it/Contacts.php" onclick="act('ico','icontact')"><b>CONTATTI</b></a></li>
+		<li><a id="Promo_a" class="i" rel="follow" href="https://www.osteriapandemonio.it/Promo.php" onclick="act('ico','ipromo')"><b>PROMO</b></a></li>
+		<li><a id="Events_a" class="i" rel="follow" href="https://www.osteriapandemonio.it/Events.php" onclick="act('ico','ievents')"><b>EVENTI</b></a></li>
+		<li><a id="News_a" class="i" rel="follow" href="https://www.osteriapandemonio.it/News.php" onclick="act('ico','inews')"><b>NEWS</b></a></li>
+	</menu>
+</header>
+<?php include($dest.".html"); ?>
+<footer>
+  <details>
+	<summary><strong>Credits</strong></summary>
+	<div>
+	<h2>Osteria Pandemonio</h2>
+	<h3>Via Lomellini, 20R 16124 Genova</h3>
+	<p></p>
+	</div>
+  </details>
+</footer>
+<script id="js_var">
+	//window.location.href;
+//alert(d.title);
+//console.log(d.title);
+const d=document;
+let w=0;
+let h=0;
+const month = ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"];
+const day=["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
+const dropdown_c=d.getElementById("dropdown_c");
+</script>
+<script id="js_init">
+  function init(){
+  d.getElementById(d.title+"_a").classList.add("active");
+  }
+</script>
+<script id="js_size">
+/*window.addEventListener("load", (event) => {
+size();
+});
+window.addEventListener("resize", (event) => {
+size();
+});
+function size(){
+let pages=d.getElementsByTagName("section");
+for(i=2;i<=12;i++){
+
+}
+let k=0;
+if(Number.isInteger(window.innerWidth/2)) {
+  w=window.innerWidth;
+  k="e";
+}else{
+  if(Number.isInteger(window.innerWidth/3)) {
+	  w=window.innerWidth;
+  }else {
+  w=window.innerWidth-1;
+  }
+  k="o";
+}
+if(Number.isInteger(window.innerHeight/2)) {
+  w=window.innerHeight;
+}else{
+  if(Number.isInteger(window.innerHeight/3)) {
+	  w=window.innerHeight;
+  }else {
+  w=window.innerHeight-1;
+  }
+}
+d.body.style.width=w+"px";
+d.body.style.height=h+"px";
+let css_i="root{--tc:#ffffff;--bgc:#e6e600;--w="+w+";--h="+h+";--grid=}";
+let ccs_b="";
+let css_e="}";
+if(k=="e"){
+css_b="";
+}
+let pages=d.getElementsByTagName("section");
+for(i=0;i<pages.length;i++){
+  pages[i].style.width=w+"px";
+  pages[i].style.height=h+"px";
+}
+}*/
+/*function action(act,s,d){
+if(act=="nav"){
+
+}
+}*/
+</script>
+<!--<script id="js_eventListener">
+window.addEventListener("load", (event) => {
+//d.getElementById("newsdate").innerHTML=myDate("d")+"-"+myDate("m")+"-"+myDate("y");
+let m=["dropown_a","Events_a","News_a","Promo_a","Logo_a","Info_a","Gallery_a","Where_a","Contacts_a"];
+let mt=["Logo_a","Info_a","Gallery_a","Where_a","Contacts_a"];
+let mts=["Foods_a","Drinks_a","Location_a"];
+let iC=d.getElementsByClassName("i");
+for(let i=0;i<iC.length;i++) {
+	iC[i].addEventListener("click", (event) => {
+		for(let ii=0;ii<iC.length;ii++) {
+			/*if(mts.includes(iC[i].id)||iC[i].id=="Gallery") {
+				sbtn("R");
+			}else{
+				sbtn("A");
+			}*/
+			if(mts.includes(iC[i].id)&&iC[ii].id=="Gallery") {
+				continue;
+			}else{
+				if(mt.includes(iC[i].id)&&mts.includes(iC[ii].id)) {
+				continue;
+				}else{
+					iC[ii].setAttribute("class","i");
+				}
+			}
+		}
+		iC[i].setAttribute("class","i active");
+	});
+};
+m.forEach((k) => {
+	d.getElementById(k).addEventListener("click", (event) => {
+		if(mt.includes(k)) {
+			dropdown_c.style="display:none;";
+		}else if(mts.includes(k)){
+			dropdown_f("mts")
+		}else{
+			dropdown_f("");
+		}
+	});
+});
+//d.getElementById("ss").innerHTML="W : "+window.innerWidth+"</br>H :"+ window.innerHeight+"</br>R : "+window.innerWidth/window.innerHeight;
+//alert("W : "+window.innerWidth+"</br>H :"+ window.innerHeight+"</br>R : "+window.innerWidth/window.innerHeight);
+});
+
+</script>-->
+<script id="js_dropdown">
+function dropdown_f(k) {
+let menu;
+if(k=="mts") {
+  menu=dropdown_c;
+}else if(k==""){
+  menu=dropdown_c;
+  //menu=mLocation;
+}
+let style= window.getComputedStyle(menu);
+let display = style.getPropertyValue('display');
+if(display=="none") {
+  style=("display:block");
+} else {
+  style=("display:none");
+}
+menu.setAttribute("style",style);
+}
+</script>
+<script id="js_sbtn">
+function sbtn(a) {
+let sbtn=d.getElementsByClassName("sbtn");
+for(let i=0;i<sbtn.length;i++) {
+  if(a=="R") {
+	  sbtn[i].classList.remove("dn");
+  } else {
+	  sbtn[i].classList.add("dn");
+  }
+}
+}
+</script>
+<script id="js_resize">
+  /*window.addEventListener("resize", (event) => {
+	d.getElementById("ss").innerHTML="W : "+window.innerWidth+"</br>H :"+ window.innerHeight+"</br>R : "+window.innerWidth/window.innerHeight;
+	alert("W : "+window.innerWidth+"</br>H :"+ window.innerHeight+"</br>R : "+window.innerWidth/window.innerHeight);
+	});*/
+	/*screen.orientation.lock("landscape").then(() => {
+		alert(`Locked to ${oppositeOrientation}\n`);
+	})
+	.catch((error) => {
+		alert( `${error}\n`);
+	});*/
+  function offset(el){
+	var width = document.getElementById('el').offsetWidth;
+	alert(document.getElementById('el').getBoundingClientRect());
+}
+</script>
+<script id="js_contact">
+  function contact(act) {
+		let main=d.getElementById("f_contact");
+		let T_label=main.getElementsByTagName("h2");
+		let T_input=main.getElementsByTagName("input");
+		if(act=="c") {
+			T_label[2].style.display="none";
+			T_input[2].style.display="none";
+			T_input[2].required=false;
+			T_label[3].style.display="none";
+			T_input[3].style.display="none";
+			T_input[3].required=false;
+			T_input[4].required=true;
+		} else {
+			T_input[0].value="p";
+			T_label[2].removeAttribute("style");
+			T_input[2].removeAttribute("style");
+			T_input[2].required=true;
+			T_label[3].removeAttribute("style");
+			T_input[3].removeAttribute("style");
+			T_input[3].required=true;
+			T_input[4].required=true;
+		}
+		d.getElementById("f_contact").style.display="block";
+	}
+</script>
+<script id="js_myDate">
+  function myDate(k) {
+		let dt=new Date();
+		let y = dt.getFullYear();
+		let m = dt.getMonth()+1;
+		let day=dt.getDate();
+		let hour = dt.getHours();
+		let mn = dt.getMinutes();
+		if(k==0) {
+			dt=y+"-"+m+"-"+day+" T "+hour+":"+mn;
+		}else if(k=="y"){
+			dt=y;
+		} else if(k=="m") {
+			dt=m;
+		} else if(k=="d") {
+			dt=day;
+		} else if(k=="h") {
+			dt=hour;
+		} else if(k=="mn") {
+			dt=mn;
+		} else if(k=="y") {
+			dt=y;
+		}
+		return dt;
+	};
+</script>
+<script id="js_nav">
+  function nav(sender,dest) {
+  let dn=d.querySelectorAll("#"+sender+"_P> section");
+  let active=d.querySelectorAll("#"+sender+"_P menu.m-t-s-sub li a");
+  let pages=[];
+  let real_sender;
+  if(sender=="Gallery"||sender=="Tools"){
+  if(sender=="Gallery") {
+	  real_sender="Gallery";
+		pages=["Location","Foods","Drinks"];
+  }else{
+	  real_sender="Tools";
+  pages=["Messengers","Qrc"];
+  }
+  sender=dest;
+  	pages.forEach(active);
+  	function active(item){
+  	if(item){d.getElementById(item+"_a").classList.remove("active");}
+  	};
+  }else{
+  	active.forEach(sub_active);
+  	function sub_active(item){
+  	if(item){item.classList.remove("active");}
+  	};
+  }
+  d.getElementById(dest+"_a").classList.add("active");
+
+  if(real_sender=="Gallery") {
+	  if(pages.includes(dest)) {
+  /*Transform in a dropdown menu
+  pages.forEach(submenu);
+  function submenu(item){
+  d.getElementById(item+"_m").setAttribute("style","display:none");
+  };
+  d.getElementById(dest+"_m").setAttribute("style","display:block");*/
+
+		  if(sender=="Location") {
+			  sender="Bar";
+		  } else if(sender=="Foods") {
+			  sender="Antipasti";
+		  } else if(sender=="Drinks") {
+			  sender="Cocktails";
+		  }
+	  } else {
+		  sender=dest;
+	  }
+	  let slide_nav=d.querySelectorAll("#slide_nav > button");
+	  slide_nav[0].setAttribute("onclick","slides('"+sender+"',0,-1)");
+	  slide_nav[1].setAttribute("onclick","slides('"+sender+"',0,1)");
+	  dn.forEach(manage);
+	  function manage(item) {
+		  item.setAttribute("style","display:none");
+	  }
+  } else {
+	  pages.forEach(manage);
+	  function manage(item) {
+		  d.getElementById(item+"_P").setAttribute("style","display:none");
+	  }
+  }
+	d.getElementById(dest+'_P').setAttribute('style',"display:block");
+}
+
+
+</script>
+<script id="js_slides">
+function slides(el,n,a) {
+	let slides=d.querySelectorAll("#"+el+"_P> section");
+	if((n+a)<0){
+		n=0;
+	}else if((n+a)>slides.length-1){
+		n=slides.length-1;
+	}else{
+		n=n+a;
+	}
+
+
+	let slide_nav=d.querySelectorAll("#slide_nav > button");
+  	slide_nav[0].setAttribute("onclick","slides('"+el+"',"+n+",-1)");
+  	slide_nav[1].setAttribute("onclick","slides('"+el+"',"+n+",1)");
+	for(let i=0;i<slides.length;i++) {slides[i].style.display="none";}
+	slides[n].style.display="block";
+}
+</script>
+<script id="js_include_HTML">
+  function includeHTML() {
+	//<div w3-include-html="content.html"></div>
+	//includeHTML();
+
+	var z, i, elmnt, file, xhttp;
+/*loop through a collection of all HTML elements:*/
+	z = document.getElementsByTagName("*");
+	for(i = 0; i < z.length; i++) {
+		elmnt = z[i];
+/*search for elements with a certain attribute:*/
+		file = elmnt.getAttribute("w3-include-html");
+		if(file) {
+/*make an HTTP request using the attribute value as the file name:*/
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4) {
+					if(this.status == 200) {
+						elmnt.innerHTML = this.responseText;}
+					if(this.status == 404) {
+						elmnt.innerHTML = "Page not found.";}
+/*remove the attribute, and call this function once more:*/
+					elmnt.removeAttribute("w3-include-html");
+					includeHTML();
+				}
+			}
+			xhttp.open("GET", file, true);
+			xhttp.send();
+/*exit the function:*/
+			return;
+		}
+	}
+};
+</script>
+<script id="js_form">
+  function _form(action){
+		if(action=="contact") {
+			let myform=d.getElementById("f_contact");
+			let inputs=myform.getElementsByTagName("input");
+			let modal=d.getElementById("modal");
+			let myoutputs=d.getElementById("modal_c");
+			let outputs=myoutputs.getElementsByTagName("input");
+			let walink=d.getElementById("walink");
+			let wacE=d.getElementById("wac");
+			//alert(JSON.stringify(inputs, null, 2));
+			let wah="https://wa.me/";
+			let wan="+393493136031";
+			let wat="/?text="
+			let wac="Vogliate prendere nota della seguente prenotazione:";
+			let wa;
+			let name;
+			for(k of inputs) {
+				for(y of outputs) {
+					if(y.hasAttribute("name")) {
+						name=k.getAttribute("name").split("_");
+						if(y.name==name[0]) {
+							if(y.name!="Telefono") {
+								y.setAttribute("value",k.value);
+								wac+=y.name+"%20:%20"+k.value+"%20\n";
+							}
+						}
+					}
+				}
+			}
+			wa=wah+wan+wat+wac;
+			//alert(wa);
+			wacE.innerHTML=wac;
+			walink.setAttribute("href",wa);
+			walink.inneHTML=wa;
+			modal.style.display="block";
+		}
+
+	}
+</script>
+</body>
+</html>
